@@ -22,12 +22,9 @@ with open('test_data_unique_address.csv', 'r') as read_obj:
         for row in csv_reader:
             # row variable is a list that represents a row in csv
             query = row[0] + ", SINGAPORE"
-            # for use in jupyter notebook, use row[1] instead of row[0]
-            # query = row[1] + ", SINGAPORE"
             print(query)
 
             # logger.info(type(str(row[0])))
-            # logger.info(type(str(row[1])))
 
             with open("test_data_unique_address_latlng.csv", "a") as output_file:
               try:
@@ -35,12 +32,8 @@ with open('test_data_unique_address.csv', 'r') as read_obj:
                 lat = res[0]['geometry']['location']['lat']
                 lng = res[0]['geometry']['location']['lng']
                 output_file.write(row[0] + "," + str(lat) + "," + str(lng) + "\n")
-                # for use in jupyter notebook, use row[1] instead of row[0]
-                # output_file.write(row[1] + "," + str(lat) + "," + str(lng) + "\n")
               except Exception as e:
                 logger.error(row[0] + "," + "========== ERROR PLEASE TRY AGAIN ========== :" + f"{e}")
-                # for use in jupyter notebook, use row[1] instead of row[0]
-                # logger.error(row[1] + "," + "========== ERROR PLEASE TRY AGAIN ========== :" + f"{e}")
                 
 # # full = json.loads(geocode_result)
 
