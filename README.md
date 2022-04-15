@@ -22,6 +22,8 @@
 
 3. $ python3 google_map_api.py
 
+4. If tranferring google_map_api.py to jupyter notebook, note comments where "row[1]" is used instead of "row[0]"
+
 ## OpenStreetMap Nominatim API Usage
 
 Script in the nominatim-openmaps-api folder works, although suggest not to use unless understand limitations in Additional Details
