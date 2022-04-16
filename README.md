@@ -22,21 +22,21 @@
 
 3. $ python3 google_map_api.py
 
-4. If tranferring google_map_api.py to jupyter notebook, note comments where "row[1]" is used instead of "row[0]"
-
 ## OpenStreetMap Nominatim API Usage
 
 Script in the nominatim-openmaps-api folder works, although suggest not to use unless understand limitations in Additional Details
 
 1. Update the input CSV filename and output CSV filename in main.py
 
-2. python3 main.py
+2. $ python3 main.py
 
 ## Additional Info
 
-1. Resources for OpenMap search Nominatim API:
+1. google_map_api.py can be used directly in jupyter notebook as well. 
 
-- Doing directly in jupyter notebook. Get latitude and longitude data columns for location dataset, and put those longitude and latitude on a map https://peterhaas-me.medium.com/how-to-geocode-with-python-and-pandas-4cd1d717d3f7
+2. Resources for OpenMap search Nominatim API:
+
+-  https://peterhaas-me.medium.com/how-to-geocode-with-python-and-pandas-4cd1d717d3f7 (get latitude and longitude data columns for location dataset, and put those longitude and latitude on a map)
 
 - https://github.com/eddymio/bulk-api-request
 
@@ -44,8 +44,8 @@ Script in the nominatim-openmaps-api folder works, although suggest not to use u
 
 - https://linkstraffic.net/from-csv-to-api-python-3-parsing/
 
-2. Nominatim geocoding API does not recognise abbreviations in addresses, and will return error if in request body. Google Maps geocoding API recognises abbreviations
+3. Nominatim geocoding API does not recognise abbreviations in addresses, and will return error if in request body. Google Maps geocoding API recognises abbreviations
 
-3. abbreviations_cleaning.ipynb contains suggested regex to cleanup abbreviations before constructing the input CSV file.
+4. abbreviations_cleaning.ipynb contains suggested regex to cleanup abbreviations before constructing the input CSV file.
 
-4. Nominatim API geocoding data may not be complete for newer locations. A number of required locations were not available and returned error when tried.
+5. Nominatim API geocoding data may not be complete for newer locations. A number of required locations were not available and returned error when tried.
